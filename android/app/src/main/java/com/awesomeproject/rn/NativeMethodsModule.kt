@@ -1,4 +1,4 @@
-package com.awesomeproject
+package com.awesomeproject.rn
 
 import com.awesomeproject.utils.DeviceUtil
 import com.facebook.react.bridge.Promise

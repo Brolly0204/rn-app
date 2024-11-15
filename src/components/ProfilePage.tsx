@@ -13,6 +13,8 @@ import {
   TextInput,
   NativeModules,
 } from 'react-native';
+import {MyView} from './MyView';
+import NativeInfoView from './LinearView';
 import profile_bg_img from '../assets/icon_mine_bg.png';
 import icon_menu from '../assets/icon_menu.png';
 import icon_share from '../assets/icon_share.png';
@@ -149,6 +151,10 @@ const ProfilePage = () => {
           </View>
         </View>
       </ImageBackground>
+
+      {/* 桥接原生ui组件 kt */}
+      <NativeInfoView />
+
       <View style={styles.inputView}>
         <View
           style={[
@@ -168,10 +174,11 @@ const ProfilePage = () => {
               console.log('text', value);
               setInputValue(value);
             }}
-            style={styles.input}
           />
         </View>
       </View>
+      {/*Fragment  */}
+      <MyView />
     </View>
   );
 };

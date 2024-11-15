@@ -1,4 +1,6 @@
-import com.awesomeproject.NativeMethodsModule
+import com.awesomeproject.rn.NativeMethodsModule
+import com.awesomeproject.view.DemoViewManager
+import com.awesomeproject.view.LinearViewManager
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
@@ -11,6 +13,7 @@ class NativeMethodsModulePackage : ReactPackage {
     }
 
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-        return emptyList()
+//        return emptyList()
+        return listOf(DemoViewManager(reactContext), LinearViewManager())
     }
 }
