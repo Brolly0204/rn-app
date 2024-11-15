@@ -154,7 +154,7 @@ const ProfilePage = () => {
 
       {/* 桥接原生ui组件 kt */}
       <NativeInfoView />
-
+      <Text>北京</Text>
       <View style={styles.inputView}>
         <View
           style={[
@@ -178,7 +178,7 @@ const ProfilePage = () => {
         </View>
       </View>
       {/*Fragment  */}
-      <MyView />
+      {/* <MyView /> */}
     </View>
   );
 };
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
   inputView: {
     width: '100%',
     paddingHorizontal: 20,
-    paddingTop: 24,
+    // paddingTop: 34,
   },
   inputBox: {
     borderWidth: 1,
