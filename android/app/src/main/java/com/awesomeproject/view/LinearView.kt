@@ -3,6 +3,7 @@ package com.awesomeproject.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.Nullable
@@ -16,19 +17,26 @@ class LinearView @JvmOverloads constructor(
     @Nullable attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
-
+    private val avatarImageView: ImageView
+    private val nameTextView: TextView
+    private val descTextView: TextView
     init {
-        val inflater = LayoutInflater.from(context)
-        val view = inflater.inflate(R.layout.result_profile, this, true)
-        // 在这里可以进一步设置组件的其他属性，比如设置文本、颜色等
-        // 例如：
-        // findViewById<TextView>(R.id.some_text_view).text = "Hello from Custom UI Component"
-        // 在这里可以获取布局文件中的各个视图元素并进行初始化操作
-        val textView1 = findViewById<TextView>(R.id.txt_name)
-        val textView2 = findViewById<TextView>(R.id.txt_desc)
-        // 根据需要设置文本视图的初始文本内容等属性
-        textView1.text = "Initial Text 1"
-        textView2.text = "Initial Text 2"
-//        addView(view, lp)
+        LayoutInflater.from(context).inflate(R.layout.result_profile, this, true)
+        avatarImageView = findViewById(R.id.img_avatar)
+        nameTextView = findViewById(R.id.txt_name)
+        descTextView = findViewById(R.id.txt_desc)
+    }
+    fun setAvatar(avatarUrl: String) {
+        // 这里可以根据 URL 设置 ImageView 的图片，这里仅做示例不实际处理
+        // 实际应用中可以使用 Glide 或 Picasso 加载图片
+        // Glide.with(avatarImageView.context).load(avatarUrl).into(avatarImageView)
+    }
+
+    fun setName(name: String) {
+        nameTextView.text = name
+    }
+
+    fun setDescription(description: String) {
+        descTextView.text = description
     }
 }

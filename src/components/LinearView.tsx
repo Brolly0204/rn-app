@@ -56,14 +56,14 @@ const NativeInfoView = requireNativeComponent<NativeInfoViewType>(
 
 
     return (
-      <View style={{flex: 1}}>
+      // <View style={{flex: 1}}>
         <NativeInfoView
           style={{flex: 1}}
           avatar="https://example.com/avatar.png"
           name="卡卡罗特"
           description="《龙珠Z：卡卡罗特》是CyberConnect2开发，万代南梦宫发行的一款角色扮演类游戏，在游戏中玩家可体验到孙悟空及其他..."
         />
-     </View>
+    //  </View>
     );
   };
 
